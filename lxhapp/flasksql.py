@@ -29,6 +29,11 @@ def index():
     #print(n)
     return '<title>测试</title><table>%s</table>' % n
 
+@app.route('/zjsql')
+def zjsql():
+    rows = cursor.fetchall()
+    #将查询结果作为参数传递给模板
+    return render_template('zjsql.html',rows=rows)
 
 if __name__== '__main__':
     app.run(debug=True)

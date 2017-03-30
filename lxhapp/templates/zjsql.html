@@ -1,0 +1,14 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}ZJSQL{% endblock %}
+
+{% block content %}
+<table>
+    <tr><td>序号</td><td>品目<td>品牌</td><td>型号</td><td>市场价格</td><td>协议价格</td><td>录入时间</td><td>是否显示</td></tr>
+    {% for row in rows %} #循环读取参数每行内容
+        <tr><td>{{ row[0] }}</td><td>{{ row[1] }}</td><td>{{ row[2] }}</td><td>{{ row[3] }}</td><td>{{ row[4] }}</td><td>{{ row[5] }}</td><td>{{ row[6] }}</td><td>{{ row[7] }}</td></tr>
+    {% endfor %}
+
+
+</table>
+{% endblock %}
